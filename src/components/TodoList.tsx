@@ -5,6 +5,7 @@ import TodoItem from './TodoItem';
 import { CircularProgress, Box, Typography, Grid, Card, CardContent, Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { toast } from 'react-toastify';
 
 type Todo = {
   id: number;
@@ -33,7 +34,7 @@ const TodoList = () => {
   const addMutation = useMutation({
     mutationFn: (todo: string) => addTodo({ title: todo, completed: false }),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['todos'] }); // Corrected to use object with queryKey
+      queryClient.invalidateQueries({ queryKey: ['todos'] }); 
     },
   });
   
@@ -82,6 +83,7 @@ const TodoList = () => {
   const handleDeleteConfirm = () => {
     if (todoToDelete !== null) {
       deleteMutation.mutate(todoToDelete);
+      toast.success('Todo deleted successfully!'); 
     }
   };
 
