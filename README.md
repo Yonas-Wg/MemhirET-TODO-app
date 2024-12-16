@@ -54,6 +54,8 @@ This application implements the following features and adheres to modern fronten
 5. **Performance Optimizations**:
    - Efficient rendering for large lists of TODO items.
 
+6. **Testing**:
+   - Unit tests using jest.
 ---
 
 ## Getting Started 🚀
@@ -82,35 +84,3 @@ yarn install
 yarn dev
 
 
-## Design Decisions & Trade-offs ⚖️
-
-### Framework Choice  
-- Used **Next.js** for its Server-Side Rendering (SSR) capabilities and performance optimizations.
-
-### UI Library  
-- Utilized **ShadCN components** for a minimalist grayscale theme, ensuring a clean and accessible UI.
-
-### State Management  
-- Chose **TanStack Query** for seamless server state synchronization, providing a more modern alternative to Redux.
-
-### Form Management  
-- Leveraged **Formik** for efficient form handling and **Yup** for schema validation.
-
----
-
-## Future Improvements ✨
-
-### Pagination or Infinite Scrolling  
-- Add support for handling large TODO lists efficiently.
-
-### Testing  
-- Include unit tests with **Jest** and **React Testing Library** to ensure reliability.
-
-### Theming  
-- Allow switching between the default grayscale theme and a more colorful theme for better customization.
-
----
-
-## License 📜
-
-This project is open-source and available under the **MIT License**.
