@@ -78,9 +78,16 @@ yarn install
 
 
 ##  Running the Application
+
  ### Start the development server:
- npm run dev
+1, npm run dev
 # or
 yarn dev
+
+2, Run the Server:
+In a separate terminal window, run the server to mock backend data using JSON Server:
+ npx json-server --watch db.json --port 3001
+
+
 
 
